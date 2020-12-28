@@ -1,9 +1,5 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+
 
 /**
  * 
@@ -24,12 +20,14 @@ import javax.swing.JLabel;
 public class Clock {
     private JLabel clockLabel;
     private DateFormat formatter = DateFormat.getDateTimeInstance();
+    private JFrame frame_1;
 
     /**
      * @wbp.parser.entryPoint
      */
     public Clock() {
         JFrame frame = initFrame();
+        frame_1.getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER, 100, 50));
         clockLabel = initClockLabel();
 
         frame.getContentPane().add(clockLabel);
@@ -54,17 +52,17 @@ public class Clock {
     }
 
     private JFrame initFrame() {
-        JFrame frame = new JFrame("Java Clock");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame_1 = new JFrame("Java Clock");
+        frame_1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        return frame;
+        return frame_1;
     }
 
     private JLabel initClockLabel() {
         JLabel label = new JLabel();
         Font font = label.getFont();
         font = new Font(font.getFontName(), font.getStyle(), font.getSize() + 4);
-        label.setFont(font);
+        label.setFont(new Font("MS UI Gothic", Font.PLAIN, 30));
         label.setText(formatter.format(new Date(System.currentTimeMillis())));
 
         return label;
