@@ -1,14 +1,4 @@
 import javax.swing.JFrame;
-
-
-/**
- * 
- */
-
-/**
- * @author 0H02004 大槻祐斗
- *
- */
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.text.DateFormat;
@@ -59,13 +49,13 @@ public class Clock {
     }
 
     private JLabel initClockLabel() {
-        JLabel label = new JLabel();
-        Font font = label.getFont();
+        JLabel Timelabel = new JLabel();
+        Font font = Timelabel.getFont();
         font = new Font(font.getFontName(), font.getStyle(), font.getSize() + 4);
-        label.setFont(new Font("MS UI Gothic", Font.PLAIN, 30));
-        label.setText(formatter.format(new Date(System.currentTimeMillis())));
+        Timelabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 30));
+        Timelabel.setText(formatter.format(new Date(System.currentTimeMillis())));
 
-        return label;
+        return Timelabel;
     }
 
     private JLabel initBackground(String imagefile, JLabel label) {
