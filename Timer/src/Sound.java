@@ -1,11 +1,4 @@
-/**
- * 
- */
 
-/**
- * @author 0H02004 大槻祐斗
- *
- */
 import java.io.*;
 import java.net.MalformedURLException;
  
