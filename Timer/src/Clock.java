@@ -78,7 +78,7 @@ public class Clock {
         Timelabel.setHorizontalAlignment(SwingConstants.CENTER);
         Font font = Timelabel.getFont();
         font = new Font(font.getFontName(), font.getStyle(), font.getSize() + 4);
-        Timelabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 30));
+        Timelabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 50));
         Timelabel.setText(formatter.format(new Date(System.currentTimeMillis())));
 
         return Timelabel;
