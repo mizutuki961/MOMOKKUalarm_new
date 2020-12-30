@@ -6,21 +6,43 @@ import java.util.Date;
 import java.util.Timer;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.BoxLayout;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Clock {
     private JLabel clockLabel;
     private DateFormat formatter = DateFormat.getDateTimeInstance();
     private JFrame frame_1;
+    private JButton TimerButton;
+    private JButton EndButton;
 
     /**
      * @wbp.parser.entryPoint
      */
     public Clock() {
         JFrame frame = initFrame();
-        frame_1.getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER, 100, 50));
+        frame_1.getContentPane().setLayout(new BorderLayout(0, 0));
         clockLabel = initClockLabel();
 
         frame.getContentPane().add(clockLabel);
+        
+        JPanel panel = new JPanel();
+        frame_1.getContentPane().add(panel, BorderLayout.SOUTH);
+        
+        TimerButton = new JButton("\u30BF\u30A4\u30DE\u30FC\u3092\u30BB\u30C3\u30C8\u3059\u308B");
+        panel.add(TimerButton);
+        
+        EndButton = new JButton("\u7D42\u4E86");
+        EndButton.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		System.exit(0);
+        	}
+        });
+        panel.add(EndButton);
 
         frame.pack();
         frame.setVisible(true);
