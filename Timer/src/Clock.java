@@ -35,6 +35,10 @@ public class Clock {
         ButtonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         
         JButton SoundStopButton = new JButton("Stop");
+        SoundStopButton.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        	}
+        });
         SoundStopButton.setFont(new Font("MS UI Gothic", Font.PLAIN, 25));
         ButtonPanel.add(SoundStopButton);
         
@@ -100,7 +104,7 @@ public class Clock {
     private void initTimer() {
         Timer timer = new Timer();
         
-        // ÇQïbå„Ç©ÇÁÉXÉ^Å[Ég
+        // ÔøΩQÔøΩbÔøΩ„Ç©ÔøΩÔøΩXÔøΩ^ÔøΩ[ÔøΩg
         Date start = new Date((System.currentTimeMillis() / 1000L) * 1000L + 2000L);
         timer.scheduleAtFixedRate(new ClockTask(this), start, 1000L);
     }
