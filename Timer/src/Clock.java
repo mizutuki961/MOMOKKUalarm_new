@@ -17,8 +17,8 @@ public class Clock {
     private JLabel clockLabel;
     private DateFormat formatter = DateFormat.getDateTimeInstance();
     private JFrame frame_1;
-    private JButton TimerButton;
     private JButton EndButton;
+    private JButton TimerButton;
 
     /**
      * @wbp.parser.entryPoint
