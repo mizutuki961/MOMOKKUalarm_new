@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.Timer;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
