@@ -25,7 +25,7 @@ public class Clock {
      */
     public Clock() {
         JFrame frame = initFrame();
-        frame_1.getContentPane().setLayout(new BorderLayout(0, 0));
+        frame_1.getContentPane().setLayout(new BorderLayout(300, 10));
         clockLabel = initClockLabel();
 
         frame.getContentPane().add(clockLabel);
@@ -35,12 +35,15 @@ public class Clock {
         ButtonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         
         JButton SoundStopButton = new JButton("Stop");
+        SoundStopButton.setFont(new Font("MS UI Gothic", Font.PLAIN, 25));
         ButtonPanel.add(SoundStopButton);
         
         TimerButton = new JButton("\u30BF\u30A4\u30DE\u30FC\u3092\u30BB\u30C3\u30C8\u3059\u308B");
+        TimerButton.setFont(new Font("MS UI Gothic", Font.PLAIN, 25));
         ButtonPanel.add(TimerButton);
         
         EndButton = new JButton("\u7D42\u4E86");
+        EndButton.setFont(new Font("MS UI Gothic", Font.PLAIN, 25));
         EndButton.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		System.exit(0);
