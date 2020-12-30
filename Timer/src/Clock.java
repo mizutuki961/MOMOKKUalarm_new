@@ -32,6 +32,9 @@ public class Clock {
         JPanel panel = new JPanel();
         frame_1.getContentPane().add(panel, BorderLayout.SOUTH);
         
+        JButton SoundStopButton = new JButton("Stop");
+        panel.add(SoundStopButton);
+        
         TimerButton = new JButton("\u30BF\u30A4\u30DE\u30FC\u3092\u30BB\u30C3\u30C8\u3059\u308B");
         panel.add(TimerButton);
         
