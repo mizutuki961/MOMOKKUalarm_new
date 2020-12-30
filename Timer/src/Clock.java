@@ -11,6 +11,7 @@ import java.awt.BorderLayout;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
 public class Clock {
     private JLabel clockLabel;
@@ -29,14 +30,14 @@ public class Clock {
 
         frame.getContentPane().add(clockLabel);
         
-        JPanel panel = new JPanel();
-        frame_1.getContentPane().add(panel, BorderLayout.SOUTH);
+        JPanel ButtonPanel = new JPanel();
+        frame_1.getContentPane().add(ButtonPanel, BorderLayout.SOUTH);
         
         JButton SoundStopButton = new JButton("Stop");
-        panel.add(SoundStopButton);
+        ButtonPanel.add(SoundStopButton);
         
         TimerButton = new JButton("\u30BF\u30A4\u30DE\u30FC\u3092\u30BB\u30C3\u30C8\u3059\u308B");
-        panel.add(TimerButton);
+        ButtonPanel.add(TimerButton);
         
         EndButton = new JButton("\u7D42\u4E86");
         EndButton.addActionListener(new ActionListener() {
@@ -44,7 +45,7 @@ public class Clock {
         		System.exit(0);
         	}
         });
-        panel.add(EndButton);
+        ButtonPanel.add(EndButton);
 
         frame.pack();
         frame.setVisible(true);
@@ -74,6 +75,7 @@ public class Clock {
 
     private JLabel initClockLabel() {
         JLabel Timelabel = new JLabel();
+        Timelabel.setHorizontalAlignment(SwingConstants.CENTER);
         Font font = Timelabel.getFont();
         font = new Font(font.getFontName(), font.getStyle(), font.getSize() + 4);
         Timelabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 30));
