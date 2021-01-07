@@ -19,6 +19,8 @@ public class Clock {
     private JFrame frame_1;
     private JButton EndButton;
     private JButton TimerButton;
+    private TimerSet Dlg=new TimerSet();
+    private String StopTime;
 
     /**
      * @wbp.parser.entryPoint
@@ -43,6 +45,15 @@ public class Clock {
         ButtonPanel.add(SoundStopButton);
         
         TimerButton = new JButton("\u30BF\u30A4\u30DE\u30FC\u3092\u30BB\u30C3\u30C8\u3059\u308B");
+        TimerButton.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		Dlg.DlgTextField.setText(StopTime.getText());
+        		Dlg.setVisible(true);
+        		if(Dlg.OkFlag) {
+        			
+        		}
+        	}
+        });
         TimerButton.setFont(new Font("MS UI Gothic", Font.PLAIN, 25));
         ButtonPanel.add(TimerButton);
         
@@ -104,7 +115,7 @@ public class Clock {
     private void initTimer() {
         Timer timer = new Timer();
         
-        // �Q�b�ォ��X�^�[�g
+        // �ｿｽQ�ｿｽb�ｿｽ繧ｩ�ｿｽ�ｿｽX�ｿｽ^�ｿｽ[�ｿｽg
         Date start = new Date((System.currentTimeMillis() / 1000L) * 1000L + 2000L);
         timer.scheduleAtFixedRate(new ClockTask(this), start, 1000L);
     }
