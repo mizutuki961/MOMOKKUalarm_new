@@ -21,7 +21,6 @@ public class Clock {
     private JButton EndButton;
     private JButton TimerButton;
     private TimerSet Dlg=new TimerSet();
-    private JLabel TestLabel;
 
     /**
      * @wbp.parser.entryPoint
@@ -70,9 +69,6 @@ public class Clock {
         	}
         });
         ButtonPanel.add(EndButton);
-        
-        TestLabel = new JLabel("");
-        MOMOKKUAlarmfrm.getContentPane().add(TestLabel, BorderLayout.NORTH);
 
         frame.pack();
         frame.setVisible(true);
