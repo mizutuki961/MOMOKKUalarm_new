@@ -63,7 +63,7 @@ public class TimerSet extends JDialog {
 		{
 			Dlgspinner = new JSpinner();
 			Dlgspinner.setModel(new SpinnerDateModel(new Date(1609426800000L), null, null, Calendar.DAY_OF_YEAR));
-			Dlgspinner.setFont(new Font("MS UI Gothic", Font.PLAIN, 50));
+			Dlgspinner.setFont(new Font("MS UI Gothic", Font.BOLD, 40));
 			contentPanel.add(Dlgspinner);
 		}
 		{
