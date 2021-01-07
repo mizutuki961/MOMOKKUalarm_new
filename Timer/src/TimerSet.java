@@ -58,6 +58,11 @@ public class TimerSet extends JDialog {
 			contentPanel.add(DlgLabel);
 		}
 		{
+			JLabel DlgLabel_2 = new JLabel("00:00:00(\u534A\u89D2)\u3067\u8A2D\u5B9A\u3057\u3066\u304F\u3060\u3055\u3044");
+			DlgLabel_2.setFont(new Font("MS UI Gothic", Font.PLAIN, 30));
+			contentPanel.add(DlgLabel_2);
+		}
+		{
 			DlgTextField = new JTextField();
 			DlgTextField.setFont(new Font("MS UI Gothic", Font.PLAIN, 40));
 			contentPanel.add(DlgTextField);
