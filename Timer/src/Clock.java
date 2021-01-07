@@ -48,10 +48,10 @@ public class Clock {
         TimerButton.addActionListener(new ActionListener() {
         	//TimerSet
         	public void actionPerformed(ActionEvent e) {
-        		Dlg.DlgTextField.setText(StopTime.getText());	//not Complete
+        		Dlg.Dlgspinner.setText(StopTime.getText());	//not Complete
         		Dlg.setVisible(true);	
         		if(Dlg.OkFlag) {	//Flag check 
-        			
+        			//TODO Describe the process
         		}
         	}
         });
