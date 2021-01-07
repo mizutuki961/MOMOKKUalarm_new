@@ -22,6 +22,7 @@ public class Clock {
     private JButton TimerButton;
     private TimerSet Dlg=new TimerSet();
     private String StopTime;
+    private JLabel TestLabel;
 
     /**
      * @wbp.parser.entryPoint
@@ -53,6 +54,7 @@ public class Clock {
         		Dlg.setVisible(true);	
         		if(Dlg.OkFlag) {	//Flag check 
         			//TODO Describe the process
+        			System.out.print("成功\n");
         		}
         	}
         });
@@ -68,7 +70,7 @@ public class Clock {
         });
         ButtonPanel.add(EndButton);
         
-        JLabel TestLabel = new JLabel("");
+        TestLabel = new JLabel("");
         frame_1.getContentPane().add(TestLabel, BorderLayout.NORTH);
 
         frame.pack();
