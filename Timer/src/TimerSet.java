@@ -26,7 +26,7 @@ public class TimerSet extends JDialog {
 	 */
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
-	private JTextField textField;
+	public JTextField DlgTextField;
 	public boolean OkFlag=false;
 
 	/**
@@ -58,10 +58,10 @@ public class TimerSet extends JDialog {
 			contentPanel.add(DlgLabel);
 		}
 		{
-			textField = new JTextField();
-			textField.setFont(new Font("MS UI Gothic", Font.PLAIN, 40));
-			contentPanel.add(textField);
-			textField.setColumns(10);
+			DlgTextField = new JTextField();
+			DlgTextField.setFont(new Font("MS UI Gothic", Font.PLAIN, 40));
+			contentPanel.add(DlgTextField);
+			DlgTextField.setColumns(10);
 		}
 		{
 			JPanel buttonPane = new JPanel();
