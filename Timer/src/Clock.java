@@ -53,7 +53,7 @@ public class Clock {
         		if(Dlg.OkFlag) {	//Flag check 
         			//TODO Describe the process
         			Calendar calendar = Calendar.getInstance();
-        			if(Dlg.Dlgspinner.getValue()==calendar.getTime()) {
+        			if(Dlg.Dlgspinner.getValue()==calendar.getTime()) {  //unfinished
         				System.out.print("77");
         			}
         		}
