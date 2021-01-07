@@ -21,7 +21,6 @@ public class Clock {
     private JButton EndButton;
     private JButton TimerButton;
     private TimerSet Dlg=new TimerSet();
-    private String StopTime;
     private JLabel TestLabel;
 
     /**
