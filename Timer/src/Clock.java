@@ -17,7 +17,7 @@ import javax.swing.SwingConstants;
 public class Clock {
     private JLabel clockLabel;
     private DateFormat formatter = DateFormat.getDateTimeInstance();
-    private JFrame frame_1;
+    private JFrame MOMOKKUAlarmfrm;
     private JButton EndButton;
     private JButton TimerButton;
     private TimerSet Dlg=new TimerSet();
@@ -28,13 +28,13 @@ public class Clock {
      */
     public Clock() {
         JFrame frame = initFrame();
-        frame_1.getContentPane().setLayout(new BorderLayout(300, 10));
+        MOMOKKUAlarmfrm.getContentPane().setLayout(new BorderLayout(300, 10));
         clockLabel = initClockLabel();
 
         frame.getContentPane().add(clockLabel);
         
         JPanel ButtonPanel = new JPanel();
-        frame_1.getContentPane().add(ButtonPanel, BorderLayout.SOUTH);
+        MOMOKKUAlarmfrm.getContentPane().add(ButtonPanel, BorderLayout.SOUTH);
         ButtonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         
         JButton SoundStopButton = new JButton("Stop");
@@ -72,7 +72,7 @@ public class Clock {
         ButtonPanel.add(EndButton);
         
         TestLabel = new JLabel("");
-        frame_1.getContentPane().add(TestLabel, BorderLayout.NORTH);
+        MOMOKKUAlarmfrm.getContentPane().add(TestLabel, BorderLayout.NORTH);
 
         frame.pack();
         frame.setVisible(true);
@@ -94,10 +94,11 @@ public class Clock {
     }
 
     private JFrame initFrame() {
-        frame_1 = new JFrame("Java Clock");
-        frame_1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        MOMOKKUAlarmfrm = new JFrame("Java Clock");
+        MOMOKKUAlarmfrm.setTitle("MOMOKKU Alarm");
+        MOMOKKUAlarmfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        return frame_1;
+        return MOMOKKUAlarmfrm;
     }
 
     private JLabel initClockLabel() {
