@@ -12,6 +12,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
+import java.util.Date;
 
 public class Clock {
     private JLabel clockLabel;
@@ -48,7 +49,7 @@ public class Clock {
         TimerButton.addActionListener(new ActionListener() {
         	//TimerSet
         	public void actionPerformed(ActionEvent e) {
-        		Dlg.Dlgspinner.setText(StopTime.getText());	//not Complete
+        		Dlg.Dlgspinner.set(StopTime.get());	//not Complete
         		Dlg.setVisible(true);	
         		if(Dlg.OkFlag) {	//Flag check 
         			//TODO Describe the process
