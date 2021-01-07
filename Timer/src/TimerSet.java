@@ -5,7 +5,6 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.Dialog.ModalityType;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
