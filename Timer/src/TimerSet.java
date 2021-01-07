@@ -82,6 +82,12 @@ public class TimerSet extends JDialog {
 			}
 			{
 				JButton cancelButton = new JButton("Cancel");
+				cancelButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						OkFlag=false;
+						setVisible(false);
+					}
+				});
 				cancelButton.setFont(new Font("MS UI Gothic", Font.PLAIN, 20));
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
