@@ -19,7 +19,7 @@ import java.util.Calendar;
  */
 
 /**
- * @author 0H03015 ñkêÏêÖåé
+ * @author 0H03015 ÔøΩkÔøΩÏêÖÔøΩÔøΩ
  *
  */
 public class TimerSet extends JDialog {
@@ -50,21 +50,15 @@ public class TimerSet extends JDialog {
 	 */
 	public TimerSet() {
 		setModalityType(ModalityType.APPLICATION_MODAL);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 174);
 		getContentPane().setLayout(new BorderLayout());
-		contentPanel.setLayout(new FlowLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		getContentPane().add(contentPanel, BorderLayout.NORTH);
+		contentPanel.setLayout(new BorderLayout(0, 0));
 		{
 			JLabel DlgLabel = new JLabel("\u65E5\u6642\u3092\u8A2D\u5B9A\u3057\u3066\u304F\u3060\u3055\u3044");
 			DlgLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 44));
 			contentPanel.add(DlgLabel);
-		}
-		{
-			Dlgspinner = new JSpinner();
-			Dlgspinner.setModel(new SpinnerDateModel(new Date(1609426800000L), null, null, Calendar.DAY_OF_YEAR));
-			Dlgspinner.setFont(new Font("MS UI Gothic", Font.BOLD, 40));
-			contentPanel.add(Dlgspinner);
 		}
 		{
 			JPanel buttonPane = new JPanel();
@@ -95,6 +89,12 @@ public class TimerSet extends JDialog {
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
 			}
+		}
+		{
+			Dlgspinner = new JSpinner();
+			getContentPane().add(Dlgspinner, BorderLayout.CENTER);
+			Dlgspinner.setModel(new SpinnerDateModel(new Date(1609426800000L),null, null, Calendar.DAY_OF_YEAR));
+			Dlgspinner.setFont(new Font("MS UI Gothic", Font.BOLD, 40));
 		}
 	}
 
