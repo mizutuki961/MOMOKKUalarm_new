@@ -10,6 +10,10 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerDateModel;
+import java.util.Date;
+import java.util.Calendar;
 
 /**
  * 
@@ -26,7 +30,6 @@ public class TimerSet extends JDialog {
 	 */
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
-	public JTextField DlgTextField;
 	public boolean OkFlag=false;
 
 	/**
@@ -53,20 +56,15 @@ public class TimerSet extends JDialog {
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		{
-			JLabel DlgLabel = new JLabel("\u6642\u9593\u3092\u8A2D\u5B9A\u3057\u3066\u304F\u3060\u3055\u3044");
+			JLabel DlgLabel = new JLabel("\u65E5\u6642\u3092\u8A2D\u5B9A\u3057\u3066\u304F\u3060\u3055\u3044");
 			DlgLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 44));
 			contentPanel.add(DlgLabel);
 		}
 		{
-			JLabel DlgLabel_2 = new JLabel("00:00:00(\u534A\u89D2)\u3067\u8A2D\u5B9A\u3057\u3066\u304F\u3060\u3055\u3044");
-			DlgLabel_2.setFont(new Font("MS UI Gothic", Font.PLAIN, 30));
-			contentPanel.add(DlgLabel_2);
-		}
-		{
-			DlgTextField = new JTextField();
-			DlgTextField.setFont(new Font("MS UI Gothic", Font.PLAIN, 40));
-			contentPanel.add(DlgTextField);
-			DlgTextField.setColumns(10);
+			JSpinner Dlgspinner = new JSpinner();
+			Dlgspinner.setModel(new SpinnerDateModel(new Date(1609426800000L), null, null, Calendar.DAY_OF_YEAR));
+			Dlgspinner.setFont(new Font("MS UI Gothic", Font.PLAIN, 50));
+			contentPanel.add(Dlgspinner);
 		}
 		{
 			JPanel buttonPane = new JPanel();
