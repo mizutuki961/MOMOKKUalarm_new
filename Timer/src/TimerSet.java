@@ -8,6 +8,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 /**
  * 
@@ -67,6 +69,12 @@ public class TimerSet extends JDialog {
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				JButton okButton = new JButton("OK");
+				okButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						OkFlag=true;
+						setVisible(false);
+					}
+				});
 				okButton.setFont(new Font("MS UI Gothic", Font.PLAIN, 20));
 				okButton.setActionCommand("OK");
 				buttonPane.add(okButton);
