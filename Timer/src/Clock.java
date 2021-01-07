@@ -46,10 +46,11 @@ public class Clock {
         
         TimerButton = new JButton("\u30BF\u30A4\u30DE\u30FC\u3092\u30BB\u30C3\u30C8\u3059\u308B");
         TimerButton.addActionListener(new ActionListener() {
+        	//TimerSet
         	public void actionPerformed(ActionEvent e) {
-        		Dlg.DlgTextField.setText(StopTime.getText());
-        		Dlg.setVisible(true);
-        		if(Dlg.OkFlag) {
+        		Dlg.DlgTextField.setText(StopTime.getText());	//not Complete
+        		Dlg.setVisible(true);	
+        		if(Dlg.OkFlag) {	//Flag check 
         			
         		}
         	}
