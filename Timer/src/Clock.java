@@ -2,12 +2,12 @@ import javax.swing.JFrame;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JSpinner;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -49,11 +49,13 @@ public class Clock {
         TimerButton.addActionListener(new ActionListener() {
         	//TimerSet
         	public void actionPerformed(ActionEvent e) {
-        		Dlg.Dlgspinner.getValue();	//not Complete
         		Dlg.setVisible(true);	
         		if(Dlg.OkFlag) {	//Flag check 
         			//TODO Describe the process
-        			System.out.print("成功\n");
+        			Calendar calendar = Calendar.getInstance();
+        			if(Dlg.Dlgspinner.getValue()==calendar.getTime()) {
+        				System.out.print("77");
+        			}
         		}
         	}
         });
