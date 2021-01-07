@@ -78,7 +78,7 @@ public class TimerSet extends JDialog {
 						setVisible(false);
 					}
 				});
-				okButton.setFont(new Font("MS UI Gothic", Font.PLAIN, 20));
+				okButton.setFont(new Font("MS UI Gothic", Font.BOLD, 20));
 				okButton.setActionCommand("OK");
 				buttonPane.add(okButton);
 				getRootPane().setDefaultButton(okButton);
@@ -91,7 +91,7 @@ public class TimerSet extends JDialog {
 						setVisible(false);
 					}
 				});
-				cancelButton.setFont(new Font("MS UI Gothic", Font.PLAIN, 20));
+				cancelButton.setFont(new Font("MS UI Gothic", Font.BOLD, 20));
 				cancelButton.setActionCommand("Cancel");
 				buttonPane.add(cancelButton);
 			}
