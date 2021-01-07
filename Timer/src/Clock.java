@@ -7,12 +7,12 @@ import java.util.Timer;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSpinner;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
-import java.util.Date;
 
 public class Clock {
     private JLabel clockLabel;
@@ -49,7 +49,7 @@ public class Clock {
         TimerButton.addActionListener(new ActionListener() {
         	//TimerSet
         	public void actionPerformed(ActionEvent e) {
-        		Dlg.Dlgspinner.set(StopTime.get());	//not Complete
+        		Dlg.Dlgspinner.getValue();	//not Complete
         		Dlg.setVisible(true);	
         		if(Dlg.OkFlag) {	//Flag check 
         			//TODO Describe the process
