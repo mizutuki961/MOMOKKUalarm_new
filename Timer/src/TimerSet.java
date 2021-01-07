@@ -7,7 +7,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
-import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JSpinner;
@@ -31,6 +30,7 @@ public class TimerSet extends JDialog {
 	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
 	public boolean OkFlag=false;
+	public JSpinner Dlgspinner;
 
 	/**
 	 * Launch the application.
@@ -61,7 +61,7 @@ public class TimerSet extends JDialog {
 			contentPanel.add(DlgLabel);
 		}
 		{
-			JSpinner Dlgspinner = new JSpinner();
+			Dlgspinner = new JSpinner();
 			Dlgspinner.setModel(new SpinnerDateModel(new Date(1609426800000L), null, null, Calendar.DAY_OF_YEAR));
 			Dlgspinner.setFont(new Font("MS UI Gothic", Font.PLAIN, 50));
 			contentPanel.add(Dlgspinner);
