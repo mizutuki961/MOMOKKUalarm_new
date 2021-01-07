@@ -67,6 +67,9 @@ public class Clock {
         	}
         });
         ButtonPanel.add(EndButton);
+        
+        JLabel TestLabel = new JLabel("");
+        frame_1.getContentPane().add(TestLabel, BorderLayout.NORTH);
 
         frame.pack();
         frame.setVisible(true);
