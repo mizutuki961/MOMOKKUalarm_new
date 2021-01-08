@@ -69,6 +69,11 @@ public class Clock {
         	}
         });
         ButtonPanel.add(EndButton);
+        
+        JLabel TimerLabel = new JLabel("セットされたタイマーはありません");
+        TimerLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 25));
+        TimerLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        MOMOKKUAlarmfrm.getContentPane().add(TimerLabel, BorderLayout.CENTER);
 
         frame.pack();
         frame.setVisible(true);
