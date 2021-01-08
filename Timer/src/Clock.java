@@ -21,6 +21,7 @@ public class Clock {
     private JButton EndButton;
     private JButton TimerButton;
     private TimerSet Dlg=new TimerSet();
+    private JLabel TimerLabel;
 
     /**
      * @wbp.parser.entryPoint
@@ -70,7 +71,7 @@ public class Clock {
         });
         ButtonPanel.add(EndButton);
         
-        JLabel TimerLabel = new JLabel("セットされたタイマーはありません");
+        TimerLabel = new JLabel("セットされたタイマーはありません");
         TimerLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 25));
         TimerLabel.setHorizontalAlignment(SwingConstants.CENTER);
         MOMOKKUAlarmfrm.getContentPane().add(TimerLabel, BorderLayout.CENTER);
