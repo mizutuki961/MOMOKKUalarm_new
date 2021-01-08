@@ -30,7 +30,7 @@ public class Clock {
         MOMOKKUAlarmfrm.getContentPane().setLayout(new BorderLayout(300, 10));
         clockLabel = initClockLabel();
 
-        frame.getContentPane().add(clockLabel);
+        frame.getContentPane().add(clockLabel, BorderLayout.NORTH);
         
         JPanel ButtonPanel = new JPanel();
         MOMOKKUAlarmfrm.getContentPane().add(ButtonPanel, BorderLayout.SOUTH);
