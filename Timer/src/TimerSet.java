@@ -14,14 +14,7 @@ import javax.swing.SpinnerDateModel;
 import java.util.Date;
 import java.util.Calendar;
 
-/**
- * 
- */
 
-/**
- * @author 0H03015 �k�쐅��
- *
- */
 public class TimerSet extends JDialog {
 
 	/**
@@ -92,8 +85,10 @@ public class TimerSet extends JDialog {
 		}
 		{
 			Dlgspinner = new JSpinner();
+			Calendar calendar = Calendar.getInstance();
+			Date initDate = calendar.getTime();
 			getContentPane().add(Dlgspinner, BorderLayout.CENTER);
-			Dlgspinner.setModel(new SpinnerDateModel(new Date(1609426800000L),null, null, Calendar.DAY_OF_YEAR));
+			Dlgspinner.setModel(new SpinnerDateModel(initDate,null, null, Calendar.DAY_OF_YEAR));
 			Dlgspinner.setFont(new Font("MS UI Gothic", Font.BOLD, 40));
 		}
 	}
