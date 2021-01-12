@@ -128,7 +128,6 @@ public class Clock {
     private void initTimer() {
         Timer timer = new Timer();
         
-        // �ｿｽQ�ｿｽb�ｿｽ繧ｩ�ｿｽ�ｿｽX�ｿｽ^�ｿｽ[�ｿｽg
         Date start = new Date((System.currentTimeMillis() / 1000L) * 1000L + 2000L);
         timer.scheduleAtFixedRate(new ClockTask(this), start, 1000L);
     }
