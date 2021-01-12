@@ -17,23 +17,24 @@ import javax.swing.SwingConstants;
 public class Clock {
     private JLabel clockLabel;
     private DateFormat formatter = DateFormat.getDateTimeInstance();
-    private JFrame MOMOKKUAlarmfrm;
+    private JFrame frame_1;
     private JButton EndButton;
     private JButton TimerButton;
     private TimerSet Dlg=new TimerSet();
+    private JLabel TestLabel;
 
     /**
      * @wbp.parser.entryPoint
      */
     public Clock() {
         JFrame frame = initFrame();
-        MOMOKKUAlarmfrm.getContentPane().setLayout(new BorderLayout(300, 10));
+        frame_1.getContentPane().setLayout(new BorderLayout(300, 10));
         clockLabel = initClockLabel();
 
-        frame.getContentPane().add(clockLabel, BorderLayout.NORTH);
+        frame.getContentPane().add(clockLabel);
         
         JPanel ButtonPanel = new JPanel();
-        MOMOKKUAlarmfrm.getContentPane().add(ButtonPanel, BorderLayout.SOUTH);
+        frame_1.getContentPane().add(ButtonPanel, BorderLayout.SOUTH);
         ButtonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
         
         JButton SoundStopButton = new JButton("Stop");
@@ -52,8 +53,9 @@ public class Clock {
         		if(Dlg.OkFlag) {	//Flag check 
         			//TODO Describe the process
         			Calendar calendar = Calendar.getInstance();
-        			if(Dlg.Dlgspinner.getValue()==calendar.getTime()) {  //unfinished
-        				System.out.print("77");
+        			System.out.print(Dlg.Dlgspinner.getValue());
+        			if((Date)Dlg.Dlgspinner.getValue()==calendar.getTime()) {  //unfinished
+        				System.out.print(Dlg.Dlgspinner.getValue());
         			}
         		}
         	}
@@ -70,10 +72,8 @@ public class Clock {
         });
         ButtonPanel.add(EndButton);
         
-        JLabel TimerLabel = new JLabel("セットされたタイマーはありません");
-        TimerLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 25));
-        TimerLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        MOMOKKUAlarmfrm.getContentPane().add(TimerLabel, BorderLayout.CENTER);
+        TestLabel = new JLabel("");
+        frame_1.getContentPane().add(TestLabel, BorderLayout.NORTH);
 
         frame.pack();
         frame.setVisible(true);
@@ -95,11 +95,10 @@ public class Clock {
     }
 
     private JFrame initFrame() {
-        MOMOKKUAlarmfrm = new JFrame("Java Clock");
-        MOMOKKUAlarmfrm.setTitle("MOMOKKU Alarm");
-        MOMOKKUAlarmfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame_1 = new JFrame("Java Clock");
+        frame_1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        return MOMOKKUAlarmfrm;
+        return frame_1;
     }
 
     private JLabel initClockLabel() {
