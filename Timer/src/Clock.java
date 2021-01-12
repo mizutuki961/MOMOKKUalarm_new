@@ -22,6 +22,7 @@ public class Clock {
     private JButton TimerButton;
     private TimerSet Dlg=new TimerSet();
     private JLabel TimerLabel;
+    public int flag = 0;
 
     /**
      * @wbp.parser.entryPoint
