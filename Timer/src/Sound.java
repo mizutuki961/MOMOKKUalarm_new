@@ -22,19 +22,18 @@ public class Sound {
 	}
  
 	public static Clip createClip(File path) {
-		//指定されたURLのオーディオ入力ストリームを取得
 		try (AudioInputStream ais = AudioSystem.getAudioInputStream(path)){
 			
-			//ファイルの形式取得
+			//繝輔ぃ繧､繝ｫ縺ｮ蠖｢蠑丞叙蠕�
 			AudioFormat af = ais.getFormat();
 			
-			//単一のオーディオ形式を含む指定した情報からデータラインの情報オブジェクトを構築
+			//蜊倅ｸ�縺ｮ繧ｪ繝ｼ繝�繧｣繧ｪ蠖｢蠑上ｒ蜷ｫ繧�謖�螳壹＠縺滓ュ蝣ｱ縺九ｉ繝�繝ｼ繧ｿ繝ｩ繧､繝ｳ縺ｮ諠�蝣ｱ繧ｪ繝悶ず繧ｧ繧ｯ繝医ｒ讒狗ｯ�
 			DataLine.Info dataLine = new DataLine.Info(Clip.class,af);
 			
-			//指定された Line.Info オブジェクトの記述に一致するラインを取得
+			//謖�螳壹＆繧後◆ Line.Info 繧ｪ繝悶ず繧ｧ繧ｯ繝医�ｮ險倩ｿｰ縺ｫ荳�閾ｴ縺吶ｋ繝ｩ繧､繝ｳ繧貞叙蠕�
 			Clip c = (Clip)AudioSystem.getLine(dataLine);
 			
-			//再生準備完了
+			//蜀咲函貅門ｙ螳御ｺ�
 			c.open(ais);
 			
 			return c;
