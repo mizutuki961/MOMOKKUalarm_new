@@ -52,9 +52,9 @@ public class Clock {
         TimerButton.addActionListener(new ActionListener() {
         	//TimerSet
         	public void actionPerformed(ActionEvent e) {
-        		Dlg.setVisible(true);	
-        		if(Dlg.OkFlag) {	//Flag check 
-        			//TODO Describe the process
+        		Dlg.setVisible(true);
+        		if(Dlg.OkFlag) {	
+        			
         			Date sdf =(Date)Dlg.Dlgspinner.getValue();
         			TimerTask task = new TimerTask() {
 						public void run() {
