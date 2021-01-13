@@ -2,9 +2,10 @@ import javax.swing.JFrame;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.text.DateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
+import java.util.TimerTask;
+
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -52,11 +53,15 @@ public class Clock {
         		Dlg.setVisible(true);	
         		if(Dlg.OkFlag) {	//Flag check 
         			//TODO Describe the process
-        			Calendar calendar = Calendar.getInstance();
-        			System.out.print(Dlg.Dlgspinner.getValue());
-        			if((Date)Dlg.Dlgspinner.getValue()==calendar.getTime()) {  //unfinished
-        				System.out.print(Dlg.Dlgspinner.getValue());
-        			}
+        			Date sdf =(Date)Dlg.Dlgspinner.getValue();
+        			TimerTask task = new TimerTask() {
+        	            public void run() {
+        	                System.out.println("OK!");
+        	            }
+        	        };
+
+        	        Timer timer = new Timer();
+        	        timer.schedule(task, sdf);
         		}
         	}
         });
