@@ -43,6 +43,7 @@ public class Clock {
         SoundStopButton.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		Sound.flag=1;
+        		TimerLabel.setText("ここに設定した時間を表示します");
         	}
         });
         SoundStopButton.setFont(new Font("MS UI Gothic", Font.PLAIN, 25));
