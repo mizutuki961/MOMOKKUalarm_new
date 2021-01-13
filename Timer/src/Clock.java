@@ -59,7 +59,6 @@ public class Clock {
         			TimerLabel.setText(sdf.toString());
         			TimerTask task = new TimerTask() {
 						public void run() {
-        	                System.out.println("OK!");
         	                try {
 								Sound.main(null);
 							} catch (Exception e) {
