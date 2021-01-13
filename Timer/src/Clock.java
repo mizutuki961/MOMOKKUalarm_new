@@ -2,7 +2,6 @@ import javax.swing.JFrame;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.text.DateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -43,6 +42,7 @@ public class Clock {
         JButton SoundStopButton = new JButton("Stop");
         SoundStopButton.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
+        		Sound.flag=1;
         	}
         });
         SoundStopButton.setFont(new Font("MS UI Gothic", Font.PLAIN, 25));
@@ -57,8 +57,14 @@ public class Clock {
         			//TODO Describe the process
         			Date sdf =(Date)Dlg.Dlgspinner.getValue();
         			TimerTask task = new TimerTask() {
-        	            public void run() {
+						public void run() {
         	                System.out.println("OK!");
+        	                try {
+								Sound.main(null);
+							} catch (Exception e) {
+								// TODO 自動生成された catch ブロック
+								e.printStackTrace();
+							}
         	            }
         	        };
 
