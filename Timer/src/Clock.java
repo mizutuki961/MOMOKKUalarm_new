@@ -23,6 +23,7 @@ public class Clock {
     private JButton TimerButton;
     private TimerSet Dlg=new TimerSet();
     public int flag = 0;
+    private JLabel TimerLabel;
 
     /**
      * @wbp.parser.entryPoint
@@ -32,7 +33,7 @@ public class Clock {
         frmMomokkutimer.getContentPane().setLayout(new BorderLayout(300, 10));
         clockLabel = initClockLabel();
 
-        frame.getContentPane().add(clockLabel);
+        frame.getContentPane().add(clockLabel, BorderLayout.NORTH);
         
         JPanel ButtonPanel = new JPanel();
         frmMomokkutimer.getContentPane().add(ButtonPanel, BorderLayout.SOUTH);
@@ -83,6 +84,11 @@ public class Clock {
         	}
         });
         ButtonPanel.add(EndButton);
+        
+        TimerLabel = new JLabel("ここに設定した時間を表示します");
+        TimerLabel.setFont(new Font("MS UI Gothic", Font.PLAIN, 30));
+        TimerLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        frmMomokkutimer.getContentPane().add(TimerLabel, BorderLayout.CENTER);
 
         frame.pack();
         frame.setVisible(true);
