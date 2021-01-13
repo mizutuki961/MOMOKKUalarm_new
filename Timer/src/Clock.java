@@ -55,7 +55,7 @@ public class Clock {
         		Dlg.setVisible(true);
         		if(Dlg.OkFlag) {	
         			Date sdf =(Date)Dlg.Dlgspinner.getValue();
-        			TimerLabel.setText((String) Dlg.Dlgspinner.getValue());
+        			TimerLabel.setText(sdf.toString());
         			TimerTask task = new TimerTask() {
 						public void run() {
         	                System.out.println("OK!");
