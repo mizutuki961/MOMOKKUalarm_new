@@ -24,6 +24,7 @@ public class Clock {
     private TimerSet Dlg=new TimerSet();
     public int flag = 0;
     private JLabel TimerLabel;
+    public int SoundStopflag=0;
 
     /**
      * @wbp.parser.entryPoint
@@ -43,6 +44,7 @@ public class Clock {
         SoundStopButton.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		Sound.flag=1;
+        		SoundStopflag=1;
         		TimerLabel.setText("ここに設定した時間を表示します");
         	}
         });
@@ -58,10 +60,13 @@ public class Clock {
         			Date sdf =(Date)Dlg.Dlgspinner.getValue();
 
         			TimerLabel.setText(sdf.toString());
+        			SoundStopflag=0;
         			TimerTask task = new TimerTask() {
 						public void run() {
         	                try {
+        	                	if(SoundStopflag==0) {
 								Sound.main(null);
+        	                	}
 							} catch (Exception e) {
 								e.printStackTrace();
 							}

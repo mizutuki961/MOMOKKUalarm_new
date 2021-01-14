@@ -8,6 +8,7 @@ public class Sound {
 	static int flag = 0;
 	public static void main(String[] args) throws Exception{
 		Clip clip = createClip(new File("alerm1.wav"));
+		flag = 0;
 		while(true) {
 			clip.loop(Clip.LOOP_CONTINUOUSLY);
 			Thread.sleep(7050);
